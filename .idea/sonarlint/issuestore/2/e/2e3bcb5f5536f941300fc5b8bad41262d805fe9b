@@ -1,0 +1,7 @@
+
+Bsquid:S1905"&Remove this unnecessary cast to "Set".(û§ôØüÿÿÿÿ
+Csquid:S1905",Remove this unnecessary cast to "LongAdder".(öÈ¦Î
+osquid:S1602"SRemove useless curly braces around statement and then remove useless return keyword(û§ôØüÿÿÿÿ
+jsquid:S1602"SRemove useless curly braces around statement and then remove useless return keyword(öÈ¦Î
+Ksquid:S1611"/Remove the parentheses around the "k" parameter(û§ôØüÿÿÿÿ
+Fsquid:S1611"/Remove the parentheses around the "k" parameter(öÈ¦Î

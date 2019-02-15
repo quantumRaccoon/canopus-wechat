@@ -1,0 +1,23 @@
+
+]squid:S00112g"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+
+osquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe
+esquid:S1192Í"HDefine a constant instead of duplicating this literal "status" 10 times.(Æ‹óÁùÿÿÿÿ
+wsquid:S14889"`Immediately return this expression instead of assigning it to the temporary variable "criteria".(¶Õ¯ì
+isquid:S1192—"LDefine a constant instead of duplicating this literal "createTime" 10 times.(·í“°øÿÿÿÿ
+csquid:S00112`"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
+isquid:S1192Õ"LDefine a constant instead of duplicating this literal "updateTime" 10 times.(¾£ü¨øÿÿÿÿ
+psquid:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù
+gsquid:S1192‘	"JDefine a constant instead of duplicating this literal "validity" 10 times.(À‚‹£øÿÿÿÿ
+fsquid:S1192³"IDefine a constant instead of duplicating this literal "account" 12 times.(Š…±‡øÿÿÿÿ
+dsquid:S1192‡"GDefine a constant instead of duplicating this literal "email" 12 times.(áÎ„µÿÿÿÿÿ
+csquid:S00112Y"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ
+Tsquid:S11552">Use isEmpty() to check whether the collection is empty or not.(Á½¼s
+dsquid:S1192Á"GDefine a constant instead of duplicating this literal "phone" 12 times.(ºÔñŠÿÿÿÿÿ
+psquid:S1192"SDefine a constant instead of duplicating this literal "updateUserAccount" 12 times.(—†²€şÿÿÿÿ
+Zsquid:S1155L">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ
+bsquid:S1192ù"JDefine a constant instead of duplicating this literal "password" 12 times.(­â›Î
+esquid:S1192•"NDefine a constant instead of duplicating this literal "createUserId" 10 times.(ŞòD
+psquid:S1192Ñ"SDefine a constant instead of duplicating this literal "createUserAccount" 12 times.(¼Ü×íøÿÿÿÿ
+gsquid:S1192‰"JDefine a constant instead of duplicating this literal "tokenWeb" 12 times.(ÌñÜüÿÿÿÿ
+ksquid:S1192Ó"NDefine a constant instead of duplicating this literal "updateUserId" 10 times.(½¡Úéúÿÿÿÿ

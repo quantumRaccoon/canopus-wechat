@@ -1,0 +1,19 @@
+
+osquid:S2737µ"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ã«ŸÌ
+msquid:S1192r"VUse already-defined constant 'DEFAULT_ENCODING' instead of duplicating its value here.(´Ú¥
+Psquid:S1068"4Remove this unused "DEFAULT_ENCODING" private field.(Ÿ´¤÷ùÿÿÿÿ
+Qsquid:S1141u"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Qsquid:S1141|"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+^squid:CallToDeprecatedMethod*"1Remove this use of "propagate"; it is deprecated.(ƒ‡Ý•ûÿÿÿÿ
+^squid:CallToDeprecatedMethod>"1Remove this use of "propagate"; it is deprecated.(ƒ‡Ý•ûÿÿÿÿ
+^squid:CallToDeprecatedMethodH"1Remove this use of "propagate"; it is deprecated.(ƒ‡Ý•ûÿÿÿÿ
+^squid:CallToDeprecatedMethodc"1Remove this use of "propagate"; it is deprecated.(ƒ‡Ý•ûÿÿÿÿ
+_squid:CallToDeprecatedMethod‹"1Remove this use of "propagate"; it is deprecated.(ƒ‡Ý•ûÿÿÿÿ
+<squid:S1181)"%Catch Exception instead of Throwable.(ëß‹™
+<squid:S1181="%Catch Exception instead of Throwable.(ëß‹™
+<squid:S1181G"%Catch Exception instead of Throwable.(ëß‹™
+<squid:S1181b"%Catch Exception instead of Throwable.(ëß‹™
+=squid:S1181Š"%Catch Exception instead of Throwable.(ëß‹™
+<squid:S1181w"%Catch Exception instead of Throwable.(ã«…­
+<squid:S1181~"%Catch Exception instead of Throwable.(„À‰ø
+Bsquid:S1181´"%Catch Exception instead of Throwable.(Ù”¤Òþÿÿÿÿ

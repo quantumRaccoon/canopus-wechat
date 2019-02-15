@@ -1,0 +1,4 @@
+
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(§Á¡Œ8î’Ì¾Š-
+:squid:S1643-"Use a StringBuilder instead.(„ýôº8ÿ‹•¿Š-
+Gsquid:S2140,")Use "java.util.Random.nextInt()" instead.(ÍªžÊ8ÿ‹•¿Š-

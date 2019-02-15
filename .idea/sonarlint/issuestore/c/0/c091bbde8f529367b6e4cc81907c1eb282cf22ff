@@ -1,0 +1,4 @@
+
+esquid:CallToDeprecatedMethod9"6Remove this use of "setMaxFileSize"; it is deprecated.(œ²›á8žì¬¦Ž-
+hsquid:CallToDeprecatedMethod;"9Remove this use of "setMaxRequestSize"; it is deprecated.(€Ò¾Ë8žì¬¦Ž-
+rsquid:S00100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ„êæüÿÿÿÿ8™¯íÀŠ-

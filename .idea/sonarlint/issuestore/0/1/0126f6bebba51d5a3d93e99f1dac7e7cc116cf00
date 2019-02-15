@@ -1,0 +1,12 @@
+
+nsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(ŽÉ¤“øÿÿÿÿ8êÉÇÁŠ-
+Ksquid:S1068"-Remove this unused "msgSender" private field.(ž°àÏ8êÉÇÁŠ-
+Lsquid:S1068"5Remove this unused "restConfiguration" private field.(Þ¾’ò
+esquid:S1192%"IDefine a constant instead of duplicating this literal "response" 4 times.(»œ¥‹ûÿÿÿÿ
+Rsquid:S1905"4Remove this unnecessary cast to "RestConfiguration".(Þ¾’ò8ðÌ½¹Š-
+squid:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ëƒ…þÿÿÿÿ
+Ysquid:S1854h";Remove this useless assignment to local variable "jsonMsg".(ÄÂ”Ò8êÉÇÁŠ-
+Osquid:S3878h"8Remove this array creation and simply pass the elements.(ÄÂ”Ò
+Jsquid:S1481h",Remove this unused "jsonMsg" local variable.(ÄÂ”Ò8êÉÇÁŠ-
+Xsquid:S1161q":Add the "@Override" annotation above this method signature(¸ØŠ‹8ðÌ½¹Š-
+Jsquid:S1905",Remove this unnecessary cast to "MsgSender".(ž°àÏ8ðÌ½¹Š-
