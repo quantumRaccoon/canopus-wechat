@@ -1,5 +1,0 @@
-
-bsquid:S1854"FRemove this useless assignment to local variable "applicationContext".(иж╔Э∙    
-Ksquid:S1656"/Remove or correct this useless self-assignment.(иж╔Э∙    
-Шsquid:S1186"АAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(є╩Цю
-Мsquid:S4165"pRemove this useless assignment; "applicationContext" already holds the assigned value along all execution paths.(иж╔Э∙    

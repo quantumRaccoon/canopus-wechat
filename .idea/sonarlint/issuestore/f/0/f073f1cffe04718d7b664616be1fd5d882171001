@@ -1,11 +1,0 @@
-
-Qsquid:S1141o"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
-Isquid:S1905'"2Remove this unnecessary cast to "ReferenceConfig".(¿ìò²
-Qsquid:S1141S"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
-@squid:S1125ˆ"(Remove the literal "true" boolean value.(’Ò®»
-esquid:S3824'"NReplace this "Map.get()" and condition with a call to "Map.computeIfAbsent()".(¿ìò²
-isquid:S3776="RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(š¢Æİ
-squid:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÑëÜ¯ùÿÿÿÿ
-Rsquid:S1905)"4Remove this unnecessary cast to "ApplicationConfig".(±Ô‡×8ğÌ½¹Š-
-Tsquid:S1905*"1Remove this unnecessary cast to "RegistryConfig".(—Àè´ûÿÿÿÿ8ğÌ½¹Š-
-Ysquid:S1161‹":Add the "@Override" annotation above this method signature(¸ØŠ‹8ğÌ½¹Š-

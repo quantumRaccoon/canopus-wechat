@@ -201,7 +201,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <configuration>
                         <testFailureIgnore>true</testFailureIgnore>
-                        <argLine>-Xmx1024M</argLine>
+                        <argLine>-Xmx512M</argLine>
                         <includes>
                             <include>**/*Test.java</include>
                         </includes>
@@ -214,7 +214,7 @@
                     <executions>
                         <execution>
                             <goals>
-                                <goal>repackage</goal>
+                                <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
                             </goals>
                         </execution>
                     </executions>

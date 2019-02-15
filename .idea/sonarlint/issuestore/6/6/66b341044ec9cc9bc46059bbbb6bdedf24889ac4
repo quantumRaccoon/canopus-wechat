@@ -1,9 +1,0 @@
-
-]squid:S19057":Remove this unnecessary cast to "RestAnnotationParameter".(¿±ëŒüÿÿÿÿ8ğÌ½¹Š-
-Ysquid:S3878"ADisambiguate this call by either casting as "Class" or "Class[]".(Ò£ßè
-Dsquid:S1905a".Remove this unnecessary cast to "RestRequest".(ÆÅŒ6
-isquid:S3776)"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ç¦‚
-Ssquid:S1905&"5Remove this unnecessary cast to "RestServiceMapping".(²Ûğù8ğÌ½¹Š-
-4squid:S2386#"Make this member "protected".(ñ’é
-Jsquid:S1905_".Remove this unnecessary cast to "RestRequest".(Ñ•Åùÿÿÿÿ
-Xsquid:UnusedPrivateMethod“"2Remove this unused private "getServerPort" method.(ãË•¿
