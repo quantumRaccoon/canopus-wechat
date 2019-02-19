@@ -185,7 +185,7 @@
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>${maven-javadoc-plugin.version}</version>
                     <configuration>
-                        <additionalparam>${javadoc.opts}</additionalparam>
+                        <doclint>${javadoc.opts}</doclint>
                     </configuration>
                     <executions>
                         <execution>
@@ -229,7 +229,8 @@
                 <jdk>[1.8,)</jdk>
             </activation>
             <properties>
-                <javadoc.opts>-Xdoclint:none</javadoc.opts>
+                <javadoc.opts>none</javadoc.opts>
+                <!--<start-class>com.canopus.website.BackendApplication</start-class>-->
             </properties>
         </profile>
     </profiles>

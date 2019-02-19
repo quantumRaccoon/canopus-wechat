@@ -1,10 +1,8 @@
 package com.canopus.website.utils;
 
-import com.canopus.website.dto.UserDto;
-import com.canopus.website.model.User;
+
 import lombok.extern.slf4j.Slf4j;
 import net.sf.cglib.beans.BeanCopier;
-import org.apache.commons.beanutils.BeanUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,25 +23,26 @@ public class CglibBeanCopierUtils {
      */
     private static String BEAN_COPIER_UNDERLINE = "_";
 
-    private static Lock initLock =new ReentrantLock(true); // 公平锁
+    private static Lock initLock = new ReentrantLock(true); // 公平锁
 
-    private static Map<String, BeanCopier> beanCopierMap =new HashMap<String,BeanCopier>();
+    private static Map<String, BeanCopier> beanCopierMap = new HashMap<String, BeanCopier>();
 
 
     /**
      * 初始化 BeanCopier
+     *
      * @param source 资源类
      * @param target 目标类
      */
-    private static BeanCopier initCopier(Class source,Class target){
+    private static BeanCopier initCopier(Class source, Class target) {
         initLock.lock();
         BeanCopier find = beanCopierMap.get(source.getName() + BEAN_COPIER_UNDERLINE + target.getName());
-        if(find!=null){
+        if (find != null) {
             initLock.unlock();
             return find;
         }
-        BeanCopier beanCopier = BeanCopier.create(source,target,false);
-        beanCopierMap.put(source.getName()+"_"+target.getName(),beanCopier);
+        BeanCopier beanCopier = BeanCopier.create(source, target, false);
+        beanCopierMap.put(source.getName() + "_" + target.getName(), beanCopier);
         initLock.unlock();
         return beanCopier;
     }
@@ -52,73 +51,65 @@ public class CglibBeanCopierUtils {
     /**
      * 获取BeanCopier
      */
-    private static  BeanCopier getBeanCopier(Class source,Class target){
+    private static BeanCopier getBeanCopier(Class source, Class target) {
         System.out.println(source.getName());
         BeanCopier beanCopier = beanCopierMap.get(source.getName() + BEAN_COPIER_UNDERLINE + target.getName());
-        if(beanCopier!=null){
+        if (beanCopier != null) {
             return beanCopier;
         }
-        return initCopier(source,target);
+        return initCopier(source, target);
     }
 
 
     /**
      * Pojo 类型转换（浅复制，字段名&类型相同则被复制）
+     *
      * @param source
      * @param targetClass
      * @param <T>
      * @return
      */
-    public static <T> T copyProperties(Object source, Class<T> targetClass){
-        if(null == source){
+    public static <T> T copyProperties(Object source, Class<T> targetClass) {
+        if (null == source) {
             return null;
         }
-        BeanCopier beanCopier = getBeanCopier(source.getClass(),targetClass);
+        BeanCopier beanCopier = getBeanCopier(source.getClass(), targetClass);
         try {
             T target = targetClass.newInstance();
-            beanCopier.copy(source,target,null);
+            beanCopier.copy(source, target, null);
             return target;
 
-        }catch (Exception e){
-            log.error("对象拷贝失败,{}",e.getMessage());
-            throw new RuntimeException("对象拷贝失败"+source+"_"+targetClass);
+        } catch (Exception e) {
+            log.error("对象拷贝失败,{}", e.getMessage());
+            throw new RuntimeException("对象拷贝失败" + source + "_" + targetClass);
         }
     }
 
 
-//    public static void main(String[] args) {
-//        User user = new User();
-//        user.setAccount("1");
-//        user.setEmail("2421");
-//        user.setName("dyc");
-//
-//        UserDto dto =copyProperties(user,UserDto.class);
-//        System.out.println(dto);
-//    }
-
     /**
      * Pojo 类型转换（浅复制，字段名&类型相同则被复制）
+     *
      * @param source
      * @param targetClass
      * @param <E>
      * @return
      */
-    public static <E> List<E> copyProperties(List source, Class<E> targetClass){
-        if(source==null){
+    public static <E> List<E> copyProperties(List source, Class<E> targetClass) {
+        if (source == null) {
             return null;
         }
         try {
-            if(source.isEmpty()){
+            if (source.isEmpty()) {
                 return source.getClass().newInstance();
             }
             List result = source.getClass().newInstance();
-            for(Object each: source){
-                result.add(copyProperties(each,targetClass));
+            for (Object each : source) {
+                result.add(copyProperties(each, targetClass));
             }
             return result;
-        }catch (Exception e){
-            log.error("对象拷贝失败,{}",e);
-            throw new RuntimeException("对象拷贝失败"+source+"_"+targetClass);
+        } catch (Exception e) {
+            log.error("对象拷贝失败,{}", e);
+            throw new RuntimeException("对象拷贝失败" + source + "_" + targetClass);
         }
     }
 
@@ -150,7 +141,7 @@ public class CglibBeanCopierUtils {
 //        }
 //        copier.copy(source, target, null);
 //    }
-    private static String generateKey(Class<?>class1,Class<?>class2){
+    private static String generateKey(Class<?> class1, Class<?> class2) {
         return class1.toString() + class2.toString();
     }
     /*注：
