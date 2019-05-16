@@ -1,10 +1,64 @@
 <view class="page">
-<i-cell-group>
-    <i-cell title="工具1" is-link url="/pages/dashboard/index"></i-cell>
-    <i-cell title="工具2" is-link url="/pages/dashboard/index"></i-cell>
-    <i-cell title="工具3" is-link url="/pages/dashboard/index"></i-cell>
-    <i-cell title="工具4" is-link url="/pages/dashboard/index"></i-cell>
-    <i-cell title="工具5" is-link url="/pages/dashboard/index"></i-cell>
-</i-cell-group>
-<view></view><!--未设置页脚-->
+<i-grid>
+    <i-row>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="activity" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="addressbook" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="barrage" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+    </i-row>
+    <i-row>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="collection" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="computer" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="coupons" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+    </i-row>
+    <i-row>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="flag" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="interactive" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="mail" />
+                <i-grid-label>宫格</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+    </i-row>
+</i-grid>
 </view>

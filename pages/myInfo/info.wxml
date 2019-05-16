@@ -9,5 +9,4 @@
     <i-cell title="开关233">
         <switch slot="footer" checked />
     </i-cell>
-
 </view>
