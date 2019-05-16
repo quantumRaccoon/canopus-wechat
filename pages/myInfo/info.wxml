@@ -1,17 +1,13 @@
-<!--pages/myInfo/info.wxml-->
-<!--index.wxml-->
 <view class="page">
   <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
     <view slot="content">内容不错</view>
     <view slot="footer">尾部内容</view>
-</i-card>
-<i-cell-group>
-    <i-cell title="只显示箭头" is-link></i-cell>
-    <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
-    <i-cell title="只有 footer 点击有效" is-link url="/pages/dashboard/index" only-tap-footer></i-cell>
-    <i-cell title="开关">
+  </i-card>
+    <i-cell title="预留1" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="预留2" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="预留3" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="开关233">
         <switch slot="footer" checked />
     </i-cell>
-</i-cell-group>
-<view></view><!--未设置页脚-->
+
 </view>
