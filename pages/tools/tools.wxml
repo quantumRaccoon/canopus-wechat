@@ -1,0 +1,11 @@
+<!--pages/tools/tools.wxml-->
+<view class="page">
+<i-cell-group>
+    <i-cell title="gg1" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="gg2" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="gg3" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="gg4" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="gg5" is-link url="/pages/dashboard/index"></i-cell>
+</i-cell-group>
+<view></view><!--未设置页脚-->
+</view>
