@@ -1,11 +1,11 @@
 // pages/myInfo/info.js
+var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    isLogin:!app.globalData.isLogin,
   },
 
   /**
@@ -26,7 +26,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**
@@ -62,5 +61,13 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  onLoginClick: function() {
+      wx.login({
+        success: res => {
+          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        }
+      })
+  },
 })

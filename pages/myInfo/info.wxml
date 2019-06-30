@@ -1,7 +1,9 @@
 <view class="page">
-  <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-    <view slot="content">内容不错</view>
-    <view slot="footer">尾部内容</view>
+ <view hidden="{{isLogin}}">
+    <i-card title="卡片标题" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+    <view slot="content">军团信息</view>
+    <view slot="footer">个人信息</view>
+    <view slot="footer">个人信息</view>
   </i-card>
     <i-cell title="预留1" is-link url="/pages/dashboard/index"></i-cell>
     <i-cell title="预留2" is-link url="/pages/dashboard/index"></i-cell>
@@ -9,4 +11,11 @@
     <i-cell title="开关233">
         <switch slot="footer" checked />
     </i-cell>
+  </view>
+
+  <view hidden="{{!isLogin}}">
+    <text>无法获取信息，请先登陆</text>
+    <i-button bind:click="onLoginClick" type="primary" open-type="getUserInfo">登陆</i-button>
+    <button open-type='getUserInfo' bindgetuserinfo="onLoginClick">登陆测试</button>
+  </view>
 </view>
