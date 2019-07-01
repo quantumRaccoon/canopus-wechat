@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isLogin:!app.globalData.isLogin,
+    isLogin:app.globalData.isLogin,
+    isNeedLogin:false,
     code:'',
   },
 
@@ -13,7 +14,79 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _this = this
+    wx.login({
+      success(res) {
+        if (res.code) {
+          //发起网络请求
+          console.log(res.code);
+          wx.request({
+            url: 'http://119.3.85.70:8085/canopus/wechat/user/getOpenId/' + res.code,
+            method: 'POST', 
+            success: function (e) {
+              console.log(e)
+              /*if (e.data.data.isFirst) {
+                console.log("first")
+              }
+              else {*/
+                wx.getSetting({
+                  success: res => {
+                    if (res.authSetting['scope.userInfo']) {
+                      // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+                      wx.getUserInfo({
+                        success: res => {
+                          // 可以将 res 发送给后台解码出 unionId
+                          //this.globalData.userInfo = res.userInfo
+                            console.log(res.userInfo)
+                            app.globalData.isLogin = true
+                            _this.setData({
+                              isLogin: true,
+                              isNeedLogin: false,
+                            })
+                          },
+                        fail:function(res) {
+                          console.log("can not get user info")
+                          wx.showToast({
+                            title: '获取用户信息失败，需要授权',
+                            icon:'none',
+                            duration: 2000,
+                          })
+                        }
+                          // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+                          // 所以此处加入 callback 以防止这种情况
+                          //if (this.userInfoReadyCallback) {
+                            //this.userInfoReadyCallback(res)
+                          //}
+                        })
+                      }
+                    },
+                  fail: ()=>{
+                    _this.setData({
+                      isNeedLogin: true,
+                      isLogin: false,
+                    })
+                  }
+                })
+              //}
+            },
+            fail: function (res) {
+              wx.showToast({
+                title: '不能请求服务器',
+                icon:'none',
+                duration: 2000,
+              })
+            }
+          })
+        } else {
+          wx.showToast({
+            title: '登录失败！',
+            icon: 'none',
+            duration: 2000,
+          })
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
   },
 
   /**
@@ -27,6 +100,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+   
   },
 
   /**
@@ -64,30 +138,17 @@ Page({
 
   },
   onLoginClick: function() {
-    let _this = this
-    wx.login({
-      success(res) {
-        if (res.code) {
-          //发起网络请求
-          console.log(res.code);
-          wx.request({
-            url: 'http://119.3.85.70:8085/canopus/wechat/user/getOpenId/' + res.code,
-            method: 'POST',
-            success: function(e) {
-              console.log(e)
-            }
-          })
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
-      }
-    })
+   
   },
   onGotUserInfo: function (e) {
     let _this = this;
     console.log(e.detail.errMsg)
     console.log(e.detail.userInfo)
     console.log(e.detail.rawData)
+    app.globalData.isLogin = true
+    _this.setData({
+      isLogin: true,
+    })
   },
 
 })

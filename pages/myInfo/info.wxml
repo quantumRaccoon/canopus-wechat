@@ -1,5 +1,5 @@
 <view class="page">
- <view hidden="{{isLogin}}">
+ <view wx:if="{{isLogin}}">
     <i-card title="卡片标题" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
     <view slot="content">军团信息</view>
     <view slot="footer">个人信息</view>
@@ -13,11 +13,8 @@
     </i-cell>
   </view>
 
-  <view hidden="{{!isLogin}}">
+  <view wx:if="{{isNeedLogin}}">
     <text>无法获取信息，请先登陆</text>
-    <i-button bind:click="onLoginClick" type="primary">登陆</i-button>
-    <i-button open-type="getUserInfo" type="primary" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息测试</i-button>
-    <button open-type="openSetting">打开授权设置页测试</button>
-    <text selectable='true'>code: {{code}}</text>
+    <i-button open-type="getUserInfo" type="primary" lang="zh_CN" bindgetuserinfo="onGotUserInfo">登录</i-button>
   </view>
 </view>
