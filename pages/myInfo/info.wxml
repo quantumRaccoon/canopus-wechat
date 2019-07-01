@@ -16,6 +16,8 @@
   <view hidden="{{!isLogin}}">
     <text>无法获取信息，请先登陆</text>
     <i-button bind:click="onLoginClick" type="primary" open-type="getUserInfo">登陆</i-button>
-    <button open-type='getUserInfo' bindgetuserinfo="onLoginClick">登陆测试</button>
+    <i-button open-type="getUserInfo" type="primary" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息测试</i-button>
+    <button open-type="openSetting">打开授权设置页测试</button>
+    <text selectable='true'>code: {{code}}</text>
   </view>
 </view>

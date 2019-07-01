@@ -6,6 +6,7 @@ Page({
    */
   data: {
     isLogin:!app.globalData.isLogin,
+    code:'',
   },
 
   /**
@@ -62,12 +63,30 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  onLoginClick: function() {
-      wx.login({
-        success: res => {
-          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+  onGotUserInfo: function (e) {
+    let _this = this;
+    console.log(e.detail.errMsg)
+    console.log(e.detail.userInfo)
+    console.log(e.detail.rawData)
+    wx.login({
+      success(res) {
+        if (res.code) {
+          //发起网络请求
+          console.log(res.code);
+          /*wx.request({
+            url: 'https://test.com/onLogin',
+            data: {
+              code: res.code
+            }
+          })*/
+          _this.setData({
+            code: res.code
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
         }
-      })
+      }
+    })
   },
+
 })
