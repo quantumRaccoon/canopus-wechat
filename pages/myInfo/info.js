@@ -63,30 +63,31 @@ Page({
   onShareAppMessage: function () {
 
   },
-  onGotUserInfo: function (e) {
-    let _this = this;
-    console.log(e.detail.errMsg)
-    console.log(e.detail.userInfo)
-    console.log(e.detail.rawData)
+  onLoginClick: function() {
+    let _this = this
     wx.login({
       success(res) {
         if (res.code) {
           //发起网络请求
           console.log(res.code);
-          /*wx.request({
-            url: 'https://test.com/onLogin',
-            data: {
-              code: res.code
+          wx.request({
+            url: 'http://119.3.85.70:8085/canopus/wechat/user/getOpenId/' + res.code,
+            method: 'POST',
+            success: function(e) {
+              console.log(e)
             }
-          })*/
-          _this.setData({
-            code: res.code
           })
         } else {
           console.log('登录失败！' + res.errMsg)
         }
       }
     })
+  },
+  onGotUserInfo: function (e) {
+    let _this = this;
+    console.log(e.detail.errMsg)
+    console.log(e.detail.userInfo)
+    console.log(e.detail.rawData)
   },
 
 })
