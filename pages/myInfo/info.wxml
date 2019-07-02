@@ -1,6 +1,6 @@
 <view class="page">
  <view wx:if="{{isLogin}}">
-    <i-avatar src="{{userAvatar}}" size="large"></i-avatar>
+    <i-avatar shape="circle" src="{{userAvatar}}" size="large">{{userName}}</i-avatar>
     <i-cell title="预留1" is-link url="/pages/dashboard/index"></i-cell>
     <i-cell title="预留2" is-link url="/pages/dashboard/index"></i-cell>
     <i-cell title="预留3" is-link url="/pages/dashboard/index"></i-cell>
@@ -9,8 +9,8 @@
     </i-cell>
   </view>
 
-  <view wx:if="{{isNeedLogin}}">
-    <text>无法获取信息，请先登陆</text>
-    <i-button open-type="getUserInfo" type="primary" lang="zh_CN" bindgetuserinfo="onGotUserInfo">登录</i-button>
+  <view class = "loginPage" wx:if="{{isNeedLogin}}">
+    <text>无法获取信息，请先授权</text>
+    <i-button open-type="getUserInfo" type="primary" lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权</i-button>
   </view>
 </view>
