@@ -1,10 +1,6 @@
 <view class="page">
  <view wx:if="{{isLogin}}">
-    <i-card title="卡片标题" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-    <view slot="content">军团信息</view>
-    <view slot="footer">个人信息</view>
-    <view slot="footer">个人信息</view>
-  </i-card>
+    <i-avatar src="{{userAvatar}}" size="large"></i-avatar>
     <i-cell title="预留1" is-link url="/pages/dashboard/index"></i-cell>
     <i-cell title="预留2" is-link url="/pages/dashboard/index"></i-cell>
     <i-cell title="预留3" is-link url="/pages/dashboard/index"></i-cell>

@@ -7,8 +7,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f8f8f9",
     "navigationBarTitleText": "BlueCanopus",
+    "backgroundColor": "#f8f8f9",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -38,7 +39,8 @@
     "i-icon": "../../dist/icon/index",
     "i-grid-item": "../../dist/grid-item/index",
     "i-grid-icon": "../../dist/grid-icon/index",
-    "i-grid-label": "../../dist/grid-label/index"
+    "i-grid-label": "../../dist/grid-label/index",
+    "i-avatar": "../../dist/avatar/index"
   },
   "sitemapLocation": "sitemap.json"
 }
